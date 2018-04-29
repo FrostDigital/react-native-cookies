@@ -1,11 +1,11 @@
 require 'json'
 
-package = JSON.parse(File.read(File.join(__dir__, '../package.json')))
+#package = JSON.parse(File.read(File.join(__dir__, '../package.json')))
 
 Pod::Spec.new do |s|
-  s.name                = package['name']
+  s.name                = "react-native-cookies"
   s.version             = "3.2.0"
-  s.summary             = package['description']
+  s.summary             = "Cookie manager for react native"
   s.description         = <<-DESC
                             React Native apps are built using the React JS
                             framework, and render directly to native UIKit
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
                             quality or capability.
                          DESC
   s.homepage            = "https://github.com/joeferraro/react-native-cookies"
-  s.license             = package['license']
+  s.license             = "MIT"
   s.author              = "joeferraro"
   s.source              = { :git => "git@github.com:joeferraro/react-native-cookies.git", :tag => "v#{s.version}" }
   s.requires_arc        = true
